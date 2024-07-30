@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  display: grid;
+
+  grid-template-areas: 
+  "top1 top2 top3"
+  "mid1 mid2 mid3"
+  "bot1 bot2 bot3"
+  ;
+
+  grid-template-rows: 100px 1fr 300px;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#spacing {
+  grid-area: top1;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+#title {
+  text-align: center;
+  font-size: 5rem;
+  grid-area: top2;
+}
+
+#start {
+  place-self: center;
+  grid-area: mid2;
+  height: 8rem;
+  width: 19rem;
+  font-size: 50px;
+  color: white;
+}
+
+.qButtons {
+  grid-area: bot2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 27rem 27rem;
+  gap: 5px;
+  justify-self: center;
+}
+
+#button1, #button2, #button3, #button4 {
+  color: white;
+  font-size: 20px;
+}
+
+#button1 {
+  background-color: red;
+}
+
+#button2 {
+  background-color: orange;
+}
+
+#button3 {
+  background-color: green;
+}
+
+#button4 {
+  background-color: blue;
+}
+
+#qText {
+  text-align: center;
+  grid-area: mid2;
+}
+
+#count {
+  font-size: 2rem;
+  position: absolute;
+}
